@@ -1,0 +1,69 @@
+#WeatherMain{
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url("../../../assets/weather.jpg");
+      background-position: center;
+
+}
+
+.card-div{
+    display:block;
+    margin:0 auto;
+    width: fit-content;
+}
+
+.sun{
+    margin-top: 10px;
+    color: yellow;
+    filter: drop-shadow( 1px 1px 10px yellow);
+}
+
+.moon{
+    margin-top: 10px;
+    color: white;
+    filter: drop-shadow( 1px 1px 10px white);
+}
+
+.card-Row {
+  background-color: rgba(0,0,0,.5);
+  width: 300px;
+  border: 1px solid;
+  border-radius: 1mm;
+  margin: 20px auto;
+}
+
+
+.header {
+  color: #fff;
+  background-color: rgba(0,0,0,.3);
+  padding-left: 16px;
+}
+
+
+/* Mat Css */
+
+.example-form {
+
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.mat-card {
+  background:transparent;
+  color: white;
+
+}
+
+::ng-deep {
+
+     .mat-form-field{
+        .mat-hint, input, ::placeholder, .mat-form-field-label {
+           color: white;
+        }
+        .mat-form-field-underline{
+          background-color: white;
+        }
+     }
+  }

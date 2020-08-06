@@ -1,1 +1,39 @@
-<h1>Check if it is happening correctly</h1>
+<div id="WeatherMain">
+  <mat-card color="primary">
+    <p>
+      <mat-toolbar class="header">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <span>Weather App</span>
+      </mat-toolbar>
+    </p>
+    <form class="example-form">
+      <mat-form-field class="example-full-width" color="accent">
+        <mat-label>City Name</mat-label>
+        <input matInput placeholder="Ex. Kolkata"  (keyup)="onChange($event.target.value)" >
+      </mat-form-field>
+    </form>
+
+    <div class="card-Row">
+
+      <div *ngIf="WeatherData.isDay" class="card-div">
+          <i class="fas fa-3x fa-sun sun"></i>
+      </div>
+      <div *ngIf="!WeatherData.isDay" class="card-div">
+          <i class="fas fa-3x fa-moon moon"></i>
+      </div>
+      <div class="card-div" style="font-size: 25px;">{{WeatherData.name}}, {{WeatherData.sys.country}}</div>
+      <div class="card-div" style="font-size: 32px; margin-top: 5px;">{{WeatherData.temp_celcius}}°C</div>
+      <div class="card-div" style="font-size: 16px; margin-top:3px;">{{WeatherData.temp_min}}° / {{WeatherData.temp_max}}°</div>
+      <div class="card-div" style="font-size: 16px; margin-top:3px;">Feels Like {{WeatherData.temp_feels_like}}°</div>
+      <div class="card-div" style="font-size: 16px; margin-top:3px;">Wind {{WeatherData.wind.speed}} m/s</div>
+      <div class="card-div" style="font-size: 16px; margin-top:3px;">{{WeatherData.Description}}</div>
+      <div class="card-div"><img [src]="WeatherData.Icon" alt="Weather Icon" class="img-fluid"></div>
+      <div class="card-div" style="font-size: 16px; margin-top:3px;">Humidity: {{WeatherData.main.humidity}}%</div>
+
+    </div>
+  </mat-card>
+
+
+</div>
